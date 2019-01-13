@@ -12,7 +12,7 @@ class CreateCategoryDriverLicenceTable extends Migration
      */
     public function up()
     {
-        Schema::create('category_driver_licence', function (Blueprint $table) {
+        Schema::create('category_driver_licences', function (Blueprint $table) {
             $table->increments('id');
             $table->date('date_of_pass');
             $table->unsignedInteger('driver_licence_id');
@@ -30,6 +30,6 @@ class CreateCategoryDriverLicenceTable extends Migration
      */
     public function down()
     {
-        Schema::drop('category_driver_licence');
+        Schema::drop('category_driver_licences');
     }
 }
