@@ -29,6 +29,14 @@
     </select>
 </div>
 
+<div class="form-group">
+    <select class="form-control" name="driver_id">
+        @foreach($drivers as $driver)
+        <option value="{{ $driver->id }}">{{ $driver->first_name }} {{ $driver->last_name }}</option>
+        @endforeach
+    </select>
+</div>
+
 <button type="submit" class="btn btn-success">Submit</button>
 </form>
 
