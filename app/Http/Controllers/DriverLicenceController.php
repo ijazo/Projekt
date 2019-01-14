@@ -15,6 +15,9 @@ class DriverLicenceController extends Controller
 {
     $driverlicences = \App\DriverLicence::with('county')->paginate();
     return view('driverlicences/index', ['driverlicences' => $driverlicences]);
+        
+    $driverlicences = \App\DriverLicence::with('county')->paginate();
+    return view('driverlicences/index', ['driverlicences' => $driverlicences]);
 
 }
 
@@ -26,7 +29,8 @@ class DriverLicenceController extends Controller
     public function create()
 {
     $counties = \App\County::all();
-    return view('driverlicences/create', ['counties' => $counties]);
+    $drivers = \App\Driver::all()
+    return view('driverlicences/create', ['counties' => $counties, 'drivers' => $drivers]);
 
 
 
